@@ -1,0 +1,25 @@
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
+set autowrite
+
+set tabstop=2 
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+set showcmd
+
+set number
+
+colorscheme desert
+
+set nowrap
+set textwidth=100
+
+set ignorecase
+set smartcase
+
+set mousehide
