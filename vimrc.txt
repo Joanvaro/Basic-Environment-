@@ -14,6 +14,10 @@ set showcmd
 
 set number relativenumber
 
+" --------------------------------------------------------------
+" Follow the instructions from: 
+" https://github.com/sonph/onehalf/tree/master/vim
+" --------------------------------------------------------------
 colorscheme onehalfdark 
 
 set nowrap
