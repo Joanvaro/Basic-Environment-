@@ -28,6 +28,14 @@ set smartcase
 
 set mousehide
 
+" --------------------------------------------------------------
+" Copy the fonts from the repo:
+" https://github.com/ryanoasis/nerd-fonts#font-installation
+" To .local/share/fonts
+" --------------------------------------------------------------
+set encoding=utf-8
+set guifont=DroidSansMono\ Nerd\ Font\ 11
+let g:airline_powerline_fonts = 1
 
 call plug#begin('~/.vim/plugged')
 
@@ -36,6 +44,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rhysd/conflict-marker.vim'
+Plug 'ryanoasis/vim-devicons'
+
+" --------------------------------------------------------------
+" Use for fern in order to use dev-fonts
+" -------------------------------------------------------------- 
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 
 call plug#end()
 
@@ -48,6 +63,7 @@ let g:loaded_netrw  = 1
 let g:loaded_netrwPlugin = 1
 let g:loaded_netrwSettings = 1
 let g:loaded_netrwFileHandlers = 1
+let g:fern#renderer = "nerdfont"
 
 noremap <silent> <Leader>f :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
 
