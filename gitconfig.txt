@@ -1,0 +1,13 @@
+[alias]
+    b = branch
+    f = fetch
+    cl = clone
+    cm = commit -m
+    co = checkout
+    lg = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    pl = pull
+    ps = push
+    st = status
+    bdd = branch -D
+    com = checkout master
+    smu = submodule update
