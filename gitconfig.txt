@@ -11,3 +11,4 @@
     bdd = branch -D
     com = checkout master
     smu = submodule update
+    cma = commit --amend
