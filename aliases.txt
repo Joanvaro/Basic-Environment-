@@ -5,4 +5,9 @@ alias cd4='cd ../../../../'
 alias cd5='cd ../../../../../'
 
 alias c='clear'
-alias h='history'
+alias gh='history|grep'
+
+# For unzip archives
+alias tarbz='tar -xvf'
+alias targz='tar -xvzf'
+alias update='sudo -- sh -c "apt update && apt upgrade -y"'
