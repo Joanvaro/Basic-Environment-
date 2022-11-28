@@ -99,3 +99,9 @@ augroup END
 " vim-airline configuration 
 " --------------------------------------------------------------
 let g:airline_theme='bubblegum'
+
+" --------------------------------------------------------------
+" Keymaps 
+" --------------------------------------------------------------
+nnoremap <C-v> :vert term<CR>
+nnoremap <C-t> :term<CR>
