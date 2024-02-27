@@ -48,28 +48,32 @@ return require('packer').startup(function(use)
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
+  -- autocompletion
+  use("hrsh7th/nvim-cmp") -- completion plugin
+  use("hrsh7th/cmp-buffer") -- source for text in buffer
+  use("hrsh7th/cmp-path") -- source for file system paths
+
+  -- snippets
+  use("L3MON4D3/LuaSnip") -- snippet engine
+  use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+  use("rafamadriz/friendly-snippets") -- useful snippet
+
+  -- maniging & installing lsp servers
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+
+  -- configuring lsp servers
+  use 'neovim/nvim-lspconfig'
+
   use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v1.x',
-    requires = {
-        -- LSP Support
-        {'neovim/nvim-lspconfig'},
-        {'williamboman/mason.nvim'},
-        {'williamboman/mason-lspconfig.nvim'},
-
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},
-        {'hrsh7th/cmp-buffer'},
-        {'hrsh7th/cmp-path'},
-        {'saadparwaiz1/cmp_luasnip'},
-        {'hrsh7th/cmp-nvim-lsp'},
-        {'hrsh7th/cmp-nvim-lua'},
-
-        -- Snippets
-        {'L3MON4D3/LuaSnip'},
-        {'rafamadriz/friendly-snippets'},
-    }
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
   }
+
+  use 'udalov/kotlin-vim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
