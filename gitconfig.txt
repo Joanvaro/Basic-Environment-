@@ -1,14 +1,30 @@
+[user]
+	name = Antonio Valdez
+	email = jose.2.valdez@continental-corporation.com
+[core]
+	editor = vim
 [alias]
     b = branch
     f = fetch
     cl = clone
     cm = commit -m
     co = checkout
+    cp = cherry-pick
     lg = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
     pl = pull
     ps = push
     st = status
+    nb = checkout -b
     bdd = branch -D
-    com = checkout master
-    smu = submodule update
+    com = checkout main
     cma = commit --amend
+    can = commit --amend --no-edit
+    psf = push -f
+    psu = push --set-upstream origin
+    rbi = rebase -i
+    rbm = rebase master
+    smu = submodule update
+[url "git@code.tooling.prod.cdsf.io:"]
+	insteadOf = https://code.tooling.prod.cdsf.io
+[pull]
+	rebase = false
