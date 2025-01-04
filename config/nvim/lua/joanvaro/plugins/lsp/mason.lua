@@ -18,8 +18,6 @@ mason_lspconfig.setup({
   ensure_installed = {
     "clangd",
     "cmake",
-    "dockerls",
     "pyre",
-    "yamlls",
   }
 })

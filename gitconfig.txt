@@ -1,6 +1,6 @@
 [user]
-	name = Antonio Valdez
-	email = jose.2.valdez@continental-corporation.com
+	name = "Insert name without quotes" 
+	email = "Insert email without quotes" 
 [core]
 	editor = vim
 [alias]
@@ -24,7 +24,5 @@
     rbi = rebase -i
     rbm = rebase master
     smu = submodule update
-[url "git@code.tooling.prod.cdsf.io:"]
-	insteadOf = https://code.tooling.prod.cdsf.io
 [pull]
 	rebase = false
